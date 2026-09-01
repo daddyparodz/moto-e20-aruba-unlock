@@ -1,0 +1,23 @@
+ARUBA partition-layout conclusion
+=================================
+
+Source: read-only rooted capture from RONS31.267-94-14 on 2026-09-01.
+Partition count: 71
+Storage: eMMC
+Slots: A/B
+
+Boot/recovery-relevant by-name entries:
+boot_a
+boot_b
+vendor_boot_a
+vendor_boot_b
+dtb_a
+dtb_b
+dtbo_a
+dtbo_b
+vbmeta_a
+vbmeta_b
+misc
+
+Dedicated recovery or recovery_a/recovery_b entry: NO
+Conclusion: this target uses the A/B recovery-as-boot layout; a custom recovery must be built for the boot chain, not flashed to a nonexistent recovery partition.

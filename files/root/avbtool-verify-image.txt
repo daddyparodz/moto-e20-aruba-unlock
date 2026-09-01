@@ -1,0 +1,3 @@
+Verifying image /tmp/tmp.EvkMpwEZMj/boot.img using key at /tmp/tmp.EvkMpwEZMj/disposable-avb-rsa4096-private.pem
+vbmeta: Successfully verified footer and SHA256_RSA4096 vbmeta struct in /tmp/tmp.EvkMpwEZMj/boot.img
+boot: Successfully verified sha256 hash of /tmp/tmp.EvkMpwEZMj/boot.img for image of 34506752 bytes

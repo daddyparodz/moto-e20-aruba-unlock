@@ -1,0 +1,18 @@
+classification=ARUBA_HARDWARE_TESTED_WINDOWS_DRIVER_PACKAGE
+export_source=Windows Driver Store oem196.inf
+original_inf_name=sprdvcom.inf
+provider=UNISOC Communications Inc.
+class=Ports
+driver_version=2020-10-14 4.20.42.134
+matched_hardware_id=USB\VID_1782&PID_4D00
+observed_device_name=SPRD U2S Diag (COM12)
+observed_status=CM_PROB_NONE
+hardware_tested_device=Motorola Moto E20 XT2155-3 ARUBA
+hardware_tested_date=2026-09-01
+export_command=pnputil /export-driver oem196.inf <destination>
+install_command_admin=pnputil /add-driver sprdvcom.inf /install
+file=sprdvcom.inf size=79774 sha256=7AA924930285803B50F4468F071657DA11C4764B4364D4CCA43757E766CD6987
+file=sprdvcom.cat size=65932 sha256=BD421E4EFFFD1629A3EFD8B7112F7ABA675AD36B8816EBCAC6C947A7CFEAB9FF
+file=amd64/sprdvcom.sys size=45640 sha256=53E573CD4D5371EDE7846F0F6E5243367E24B18E1D374DD999C052302C65E182
+file=amd64/WdfCoInstaller01009.dll size=1730888 sha256=4CF39FAE9F8E3A2ED6F479AB24DD669B0FCDD28879E70785AFA3D5F13C12F3AE
+note=Exported byte-for-byte from the driver package that successfully exposed the tested BootROM interface. Windows signature/policy remains authoritative during installation.

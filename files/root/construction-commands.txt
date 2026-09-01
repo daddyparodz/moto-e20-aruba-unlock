@@ -1,0 +1,6 @@
+TARGET_BUILD_VARIANT=user <V108e exact KernelSU v0.9.5 manual integration>
+<kernel-only boot-v2 rebuild preserving stock ramdisk/DTB/header parameters and updating boot header ID>
+openssl genrsa -out <ephemeral-private.pem> 4096
+python3 avbtool.py extract_public_key --key <ephemeral-private.pem> --output <public.avbpubkey>
+python3 avbtool.py add_hash_footer --image boot.img --partition_size 67108864 --partition_name boot --hash_algorithm sha256 --algorithm SHA256_RSA4096 --key <ephemeral-private.pem> --salt 115CBA3D01D679F174727889DCA7C9A9AC4807F10B62023E182CC630B1CDD2DD --rollback_index 3 --flags 0 --internal_release_string 'avbtool 1.1.0' --prop 'com.android.build.boot.fingerprint:motorola/aruba/aruba:11/RONS31.267-94-14/8ddaf:user/release-keys' --prop 'com.android.build.boot.os_version:11'
+python3 avbtool.py verify_image --image boot.img --key <ephemeral-private.pem>

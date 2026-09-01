@@ -1,0 +1,8 @@
+classification=ARUBA_FINAL_V3_FDL2_RETAINED
+file=fdl2-dl-aruba.bin
+size=1159000
+sha256=5BCAE75A8E3A940B294F46DDE2CD8FC5817A89A0544C917437A500A9188F03B3
+source=operator PAC extraction directory ARUBA_PAC_EXTRACTED
+hardware_use=V3 boot_a backup, write, and readback on 2026-09-01
+observed_message=FDL2: incompatible partition
+message_effect=nonfatal; partition table, eMMC, slot A, read, write, and readback all succeeded

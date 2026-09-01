@@ -1,0 +1,51 @@
+From: ARUBA ARMv7 compatibility build
+Subject: [PATCH] Build KernelSU v0.9.5 ksud for 32-bit ARM Android
+
+The upstream v0.9.5 userspace build only listed AArch64 and x86_64. ARUBA runs
+a 64-bit kernel with a strictly 32-bit ARM userspace. These narrow casts make
+the pinned dependencies compile for Android armv7; the daemon's sparse-file
+helpers remain unsuitable for offsets outside 32-bit off_t and are not used by
+the allowlist persistence path verified here.
+
+--- a/userspace/ksud/src/su.rs
++++ b/userspace/ksud/src/su.rs
+@@
+-            #[cfg(target_arch = "aarch64")]
++            #[cfg(any(target_arch = "aarch64", target_arch = "arm"))]
+             let pw = libc::getpwnam(name.as_ptr()).as_ref();
+
+--- a/vendor/loopdev/src/lib.rs
++++ b/vendor/loopdev/src/lib.rs
+@@
+-            .map(|m| unsafe { libc::major(m.rdev()) as u32 })
++            .map(|m| unsafe { libc::major(m.rdev() as libc::dev_t) as u32 })
+@@
+-            .map(|m| unsafe { libc::minor(m.rdev()) as u32 })
++            .map(|m| unsafe { libc::minor(m.rdev() as libc::dev_t) as u32 })
+
+--- a/vendor/hole-punch/src/unix.rs
++++ b/vendor/hole-punch/src/unix.rs
+@@
+-fn find_next_hole(fd: c_int, offset: off_t) -> Result<Option<off_t>, ScanError> {
++fn find_next_hole(fd: c_int, offset: i64) -> Result<Option<i64>, ScanError> {
+@@
+-        let new_offset = lseek(fd, offset, SEEK_HOLE);
++        let new_offset = lseek(fd, offset as off_t, SEEK_HOLE);
+@@
+-            Ok(Some(new_offset))
++            Ok(Some(new_offset as i64))
+@@
+-fn find_next_data(fd: c_int, offset: off_t) -> Result<Option<off_t>, ScanError> {
++fn find_next_data(fd: c_int, offset: i64) -> Result<Option<i64>, ScanError> {
+@@
+-        let new_offset = lseek(fd, offset, SEEK_DATA);
++        let new_offset = lseek(fd, offset as off_t, SEEK_DATA);
+@@
+-            Ok(Some(new_offset))
++            Ok(Some(new_offset as i64))
+@@
+-fn find_end(fd: c_int) -> Result<off_t, ScanError> {
++fn find_end(fd: c_int) -> Result<i64, ScanError> {
+@@
+-            Ok(new_offset)
++            Ok(new_offset as i64)

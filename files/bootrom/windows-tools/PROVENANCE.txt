@@ -1,0 +1,14 @@
+classification=ARUBA_HARDWARE_TESTED_WINDOWS_TRANSPORT_BUNDLE
+platform=Windows x64
+upstream_repository=https://github.com/TomKing062/spreadtrum_flash
+upstream_source_commit=fa0becf5e3f026b3b99103c65de6eb9a8348b27c
+hardware_tested_device=Motorola Moto E20 XT2155-3 ARUBA
+hardware_tested_usb=1782:4d00 / SPRD U2S Diag
+hardware_tested_date=2026-09-01
+working_directory_requirement=Run spd_dump.exe from this directory so Channel9.dll and custom_exec_no_verify_65015f08.bin resolve.
+file=spd_dump.exe size=80896 sha256=2E4C117EB22FF800448FF827740AC280FAAEE19B579F8D85577C8F15C2065D7C
+file=Channel9.dll size=229376 sha256=79EDBD9E4AE5D1D8B572D8663EB921069736EF0B7EE661920D3CDE9855BC3D4F
+file=Channel.ini size=387 sha256=F6A4D42665246D87B5704DB77B0691BA68AB3B8A9F4456BD41C4131E5EC18645
+file=custom_exec_no_verify_65015f08.bin size=96 sha256=32D8B796FF484C168D7FC63D9ED75D056D0833B55C7D65FBDAF2C548474F3C62
+file=misc-wipe.bin size=2048 sha256=BD6B67E852D6072E6FB87040F2AC40216D5B661B7FA661E7024569ECF8DDB3A7
+note=The executable reports the pinned source marker in --help. These retained binaries are exact tested inputs, not a claim that the PE build itself is reproducible from source.

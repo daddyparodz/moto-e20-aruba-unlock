@@ -1,0 +1,9 @@
+classification=ARUBA_KERNELSU_MANAGER_PAIR_V3_PREWRITE_BACKUP
+partition=boot_a
+slot=a
+storage=emmc
+size=67108864
+sha256=F0EB7A92314127793B506A922218A287F43998B5D3FA6C207C78F522A6B4E17B
+expected_previous_artifact=KernelSU-v0.9.5-profile-version-v2
+hash_matches_expected_previous_artifact=YES
+write_performed_at_checkpoint=NO

@@ -1,0 +1,26 @@
+Footer version:           1.0
+Image size:               67108864 bytes
+Original image size:      34506752 bytes
+VBMeta offset:            34508800
+VBMeta size:              2304 bytes
+--
+Minimum libavb version:   1.0
+Header Block:             256 bytes
+Authentication Block:     576 bytes
+Auxiliary Block:          1472 bytes
+Public key (sha1):        48286ccec40051ff150bdee4f832adc13d8988f4
+Algorithm:                SHA256_RSA4096
+Rollback Index:           3
+Flags:                    0
+Rollback Index Location:  0
+Release String:           'avbtool 1.1.0'
+Descriptors:
+    Hash descriptor:
+      Image Size:            34506752 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        boot
+      Salt:                  115cba3d01d679f174727889dca7c9a9ac4807f10b62023e182cc630b1cdd2dd
+      Digest:                8a94af8ec49ff5d3e10ffe1801c5948fee2f49687f77fcac34e67f3dfac967ec
+      Flags:                 0
+    Prop: com.android.build.boot.fingerprint -> 'motorola/aruba/aruba:11/RONS31.267-94-14/8ddaf:user/release-keys'
+    Prop: com.android.build.boot.os_version -> '11'

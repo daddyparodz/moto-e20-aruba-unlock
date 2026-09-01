@@ -1,0 +1,25 @@
+classification=ARUBA_KERNELSU_PROFILE_V2_PERSISTENT_ROOT_PASS
+device_serial=ZE222XMZH6
+product_device=aruba
+build_display_id=RONS31.267-94-14
+active_slot=_a
+flash_locked=0
+verified_boot_state=orange
+candidate_sha256=F0EB7A92314127793B506A922218A287F43998B5D3FA6C207C78F522A6B4E17B
+first_boot_completed=1
+first_boot_config_ksu=y
+first_boot_config_ksu_debug=y
+first_boot_kernelsu_module_present=YES
+first_boot_su_identity=uid=0(root) gid=0(root) groups=0(root) context=u:r:su:s0
+first_boot_su_selinux_context=u:r:su:s0
+ordinary_adb_reboot_performed=YES
+second_boot_completed=1
+second_boot_product_device=aruba
+second_boot_build_display_id=RONS31.267-94-14
+second_boot_active_slot=_a
+second_boot_verified_boot_state=orange
+second_boot_su_check_1=uid=0(root) gid=0(root) groups=0(root) context=u:r:su:s0
+second_boot_su_check_1_selinux_context=u:r:su:s0
+second_boot_su_check_2=uid=0(root) gid=0(root) groups=0(root) context=u:r:su:s0
+second_boot_su_check_2_selinux_context=u:r:su:s0
+persistent_root_verified=YES

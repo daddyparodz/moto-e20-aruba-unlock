@@ -1,0 +1,19 @@
+* text=auto
+*.bin binary
+*.dll binary
+*.exe binary
+*.img binary
+*.jar binary
+*.xz binary
+*.apk binary
+*.cat binary
+*.der binary
+*.pem text eol=lf
+*.ps1 text eol=crlf
+*.py text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+files/bootrom/windows-tools/Channel.ini binary
+files/bootrom/windows-driver/sprdvcom.inf binary

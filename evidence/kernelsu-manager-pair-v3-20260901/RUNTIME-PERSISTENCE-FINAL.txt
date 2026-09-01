@@ -1,0 +1,18 @@
+classification=ARUBA_KERNELSU_MANAGER_ROOTCHECKER_PERSISTENCE_VERIFIED
+boot_image_sha256=F9A3DE1A4C377EA2871A03E6437F75F38BF4A0532A36A2418CA1BAE78DE78D70
+boot_partition=boot_a
+boot_readback_matches_image=YES
+boot_completed_after_ordinary_reboot=1
+slot_after_reboot=_a
+root_after_reboot=uid=0(root) gid=0(root) groups=0(root) context=u:r:su:s0
+manager_status_after_reboot=RUNNING
+manager_version=11872
+manager_root_app_count_after_reboot=2
+ksud_version=0.9.5
+ksud_sha256=504DBBE6439F82F5624A891DF31885FACB74FAA1AD89FCC302968842403A8AD5
+allowlist_sha256_before_reboot=83008D98F3433326ECFA3A6B9660607D0398EB54D3EEE6CF3924789A4078DCF1
+allowlist_sha256_after_reboot=83008D98F3433326ECFA3A6B9660607D0398EB54D3EEE6CF3924789A4078DCF1
+rootchecker_package=com.joeykrim.rootcheck
+rootchecker_version=6.5.11
+rootchecker_result_after_reboot=Congratulations! Root access is properly installed on this device.
+persistent_app_grant_verified=YES

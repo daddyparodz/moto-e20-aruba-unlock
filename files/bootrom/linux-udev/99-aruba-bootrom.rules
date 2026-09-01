@@ -1,0 +1,2 @@
+# Motorola Moto E20 ARUBA / Spreadtrum-Unisoc BootROM interface
+SUBSYSTEM=="usb", ATTR{idVendor}=="1782", ATTR{idProduct}=="4d00", MODE="0660", TAG+="uaccess"

@@ -1,0 +1,17 @@
+ARUBA KERNELSU V0.9.5 FIRST BOOT RESULT
+recorded_date=2026-09-01
+boot_a_candidate_sha256=288C6C651888647D50F9BC694CDA286727D7E339DB5379B97C3FDA1BEC4967C9
+adb_online=YES
+sys_boot_completed=1
+build_fingerprint=motorola/aruba_reteu/aruba:11/RONS31.267-94-14/8ddaf:user/release-keys
+slot=_a
+verified_boot_state=orange
+kernel_release=4.14.199+-ab8ddaf
+kernel_boot_result=PASS
+android_userspace_abi=armeabi-v7a,armeabi
+zygote=zygote32
+official_manager_apk_sha256=8384B08FB8C4CF1314FA87AFF80839FAF284D22EEFF41A8319E8EAA1336F1E7B
+official_manager_native_abis=arm64-v8a,x86_64
+official_manager_install_result=INSTALL_FAILED_NO_MATCHING_ABIS
+su_available=NO
+classification=KERNELSU_KERNEL_BOOTS_MANAGER_BLOCKED_BY_32BIT_USERSPACE

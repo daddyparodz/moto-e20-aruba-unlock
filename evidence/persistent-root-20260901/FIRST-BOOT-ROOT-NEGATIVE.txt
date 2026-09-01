@@ -1,0 +1,23 @@
+ARUBA_KERNELSU_V095_DEBUG_SYSTEM_SH_FIRST_BOOT=BOOT_PASS_ROOT_FAIL
+RECORDED_AT_UTC=2026-09-01T18:42:00Z
+DEVICE_SERIAL=ZE222XMZH6
+PRODUCT=aruba
+BUILD=RONS31.267-94-14
+SLOT_SUFFIX=_a
+FLASH_LOCKED=0
+VBMETA_DEVICE_STATE=unlocked
+VERIFIED_BOOT_STATE=orange
+SYS_BOOT_COMPLETED=1
+KERNEL=Linux localhost 4.14.199+-ab8ddaf armv8l
+LIVE_CONFIG_KSU=y
+LIVE_CONFIG_KSU_DEBUG=y
+KERNELSU_MODULE_PRESENT=/sys/module/kernelsu
+ROOT_TEST_DIRECT=/system/bin/sh: /system/bin/su: inaccessible or not found
+ROOT_TEST_DIRECT_RC=127
+ROOT_TEST_ENV=env: exec /system/bin/su: No such file or directory
+ROOT_TEST_ENV_RC=127
+ROOT_TEST_CONTEXT=u:r:shell:s0
+UID0_OBTAINED=NO
+BOUNDED_APP_PROCESS_RETRIGGER=FAILED_TO_GRANT_SHELL
+DIAGNOSIS=KernelSU v0.9.5 debug shell profile omits .version=KSU_APP_PROFILE_VER while profile_valid rejects version 0; shell UID 2000 is therefore not admitted to the allowlist.
+REPAIR=Build a new preserved V2 artifact that initializes the debug shell profile version, retains CONFIG_KSU_DEBUG=y and KSUD_PATH=/system/bin/sh, and verifies the exact source delta before packaging.

@@ -1,0 +1,16 @@
+classification=ARUBA_KERNELSU_MANAGER_PAIR_V3_RUNTIME_VERIFIED
+boot_completed=1
+slot=_a
+su_id=uid=0(root) gid=0(root) groups=0(root) context=u:r:su:s0
+su_selinux_context=u:r:su:s0
+manager_package=me.weishu.kernelsu
+manager_version=v0.9.5 (11872)
+manager_primary_abi=armeabi-v7a
+manager_status=RUNNING
+manager_kernel_version=11872
+rootchecker_package=com.joeykrim.rootcheck
+rootchecker_version=6.5.11
+rootchecker_uid=10213
+rootchecker_profile_enabled=YES
+rootchecker_result=Congratulations! Root access is properly installed on this device.
+ordinary_reboot_persistence_checked=NO

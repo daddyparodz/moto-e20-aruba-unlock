@@ -1,0 +1,29 @@
+{
+  "aligned_kernel_delta": 77824,
+  "boot_header_id_mode": "kernel_ramdisk_second_recovery_dtb",
+  "classification": "ARUBA_BOOT_V2_KERNEL_ONLY_REPACK",
+  "clean_modified_original_image_size": 34506752,
+  "header_size": 1660,
+  "kernel_padding_size": 2032,
+  "new_boot_header_id_hex": "AEFB2DFD7BA63796B2CD070C7B274F50DB6CA4AC000000000000000000000000",
+  "new_kernel_sha256": "DD79FA3D718129A8974CAC886919B9ADC5862030A75AC8A49417FF58AB359464",
+  "new_kernel_size": 25323536,
+  "page_size": 2048,
+  "preserved_regions": [
+    "header_padding",
+    "ramdisk",
+    "ramdisk_padding",
+    "second",
+    "second_padding",
+    "recovery_dtbo",
+    "recovery_padding",
+    "dtb",
+    "dtb_to_original"
+  ],
+  "recovery_dtbo_offset_new": 0,
+  "recovery_dtbo_offset_old": 0,
+  "stock_boot_header_id_hex": "930B2845AD62ED4D26CE863455B5ADC799CBDC09000000000000000000000000",
+  "stock_kernel_sha256": "AF42E9BF5CB042F4330AD361CC9DD3513FA7B8CDC9DA8DD735431A4F0907A472",
+  "stock_kernel_size": 25245712,
+  "stock_original_image_size": 34428928
+}

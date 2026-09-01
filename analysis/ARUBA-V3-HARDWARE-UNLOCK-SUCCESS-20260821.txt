@@ -1,0 +1,140 @@
+ARUBA V3 HARDWARE UNLOCK SUCCESS
+================================
+
+Date: 2026-08-21
+Device family: Motorola Moto E20 ARUBA / ums9230
+Result: BOOTLOADER UNLOCK VERIFIED ON NORMAL ANDROID BOOT
+
+Privacy note
+------------
+
+The connected ADB device serial is intentionally not recorded in this repository report.
+
+Hardware transaction
+--------------------
+
+Transaction directory:
+D:\Download\e20\ums9230_moto_e13_v2\V3_TRANSACTION_20260821-113646
+
+Authorized candidate:
+generated/fdl2-cboot-aruba-v3-offline.bin
+SHA256 F16385309B5F2538D406207411D09B3D02DE23B341E5A10602BF458DFED7E5B3
+
+Authorized single-entry runner used:
+scripts/unlock-aruba-v3.ps1
+canonical LF SHA256 2AB6381B887E1CAFF19C648AD7A4EF80D7F3EF439B52D9384DB16D7C02417936
+
+Required exec helper:
+D:\Download\e20\ums9230_moto_e13_v2\custom_exec_no_verify_65015f08.bin
+size 96
+SHA256 32D8B796FF484C168D7FC63D9ED75D056D0833B55C7D65FBDAF2C548474F3C62
+
+spd_dump build marker:
+sha1:fa0becf5e3f026b3b99103c65de6eb9a8348b27c
+
+Transaction observations
+------------------------
+
+Retained FDL2 live precheck: PASS
+
+Before destructive work:
+- active U-Boot matched trusted stock
+- splloader matched trusted stock
+- splloader_bak matched trusted stock
+- active slot a
+- storage eMMC
+- miscdata+0x2000 record SHA256:
+  8AF340B74CEDDF8D6F3614850B122693899F414B3A17C19FD306D1B9E9A0C0A0
+
+Stage 1:
+- splloader erased
+- splloader_bak erased
+- both erased readbacks verified
+
+Stage 2:
+- exact ARUBA cboot v3 candidate written to active U-Boot
+- candidate U-Boot readback verified
+- one normal reset issued only after both on-disk SPL copies were verified erased and candidate U-Boot was verified
+
+Stage 3:
+- spl-unlock.bin executed exactly once
+- spd_dump process exit code: 1
+- log contained device removal during the one-shot stage
+- no automatic retry of the non-idempotent stage occurred
+
+Stage 4:
+- automatic BootROM reconnect succeeded without another manual volume-key entry
+- post-v3 record captured before stock restoration
+- stock U-Boot restored first
+- splloader restored
+- splloader_bak restored
+- validated misc cleanup written
+- stock U-Boot readback verified
+- both stock SPL readbacks verified
+- phone powered off after verified stock restoration
+
+Persistent record transition
+----------------------------
+
+Before v3:
+8AF340B74CEDDF8D6F3614850B122693899F414B3A17C19FD306D1B9E9A0C0A0
+
+After v3:
+C59B9923FFF8DE7183D9F715530E900EC8D8E2604591290FD7C33693BB3FE852
+
+After stock restoration:
+C59B9923FFF8DE7183D9F715530E900EC8D8E2604591290FD7C33693BB3FE852
+
+Runner final result:
+V3 TRANSACTION MECHANICS: COMPLETE
+FINAL V3 MECHANICAL RESULT: stock chain restored and the 64-byte record changed.
+
+Independent Android unlock verification
+---------------------------------------
+
+After a manually initiated normal Android boot:
+
+ro.boot.flash.locked=0
+ro.boot.vbmeta.device_state=unlocked
+ro.boot.verifiedbootstate=orange
+ro.boot.veritymode=enforcing
+
+Unlock completion gate
+----------------------
+
+PASS
+
+The required independent normal-boot evidence is satisfied:
+- ro.boot.flash.locked=0
+- ro.boot.vbmeta.device_state=unlocked
+
+Therefore the Motorola Moto E20 ARUBA bootloader is verified unlocked.
+
+The orange Verified Boot state is consistent with the unlocked bootloader state. veritymode=enforcing does not negate the unlock result.
+
+Safety status after success
+---------------------------
+
+- stock U-Boot restored and readback-verified
+- stock splloader restored and readback-verified
+- stock splloader_bak restored and readback-verified
+- v1 remains prohibited
+- v2 remains prohibited
+- historical FDL1-RAM v2 route remains prohibited
+- do not rerun the v3 unlock transaction on this already-unlocked phone without a new explicit reason and a new safety review
+- Magisk/root work may now proceed, but only after identifying the exact currently booted firmware build and matching stock boot image
+
+Relevant final authorization Actions
+------------------------------------
+
+Working-directory authorization seal:
+run 32467611005
+job 96727467427
+result success
+Stop containers success
+
+Latest duplicate/follow-up final workdir authorization run observed during local fetch:
+run 32467687143
+job 96727695530
+result success
+Stop containers success

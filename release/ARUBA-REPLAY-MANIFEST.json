@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "target": {
+    "model": "Motorola Moto E20 XT2155-3",
+    "codename": "aruba",
+    "soc": "Unisoc UMS9230",
+    "storage": "eMMC",
+    "android_build": "RONS31.267-94-14",
+    "slot": "_a"
+  },
+  "files": [
+    {"role":"transport executable","path":"files/bootrom/windows-tools/spd_dump.exe","size":80896,"sha256":"2E4C117EB22FF800448FF827740AC280FAAEE19B579F8D85577C8F15C2065D7C"},
+    {"role":"transport runtime","path":"files/bootrom/windows-tools/Channel9.dll","size":229376,"sha256":"79EDBD9E4AE5D1D8B572D8663EB921069736EF0B7EE661920D3CDE9855BC3D4F"},
+    {"role":"transport configuration","path":"files/bootrom/windows-tools/Channel.ini","size":387,"sha256":"F6A4D42665246D87B5704DB77B0691BA68AB3B8A9F4456BD41C4131E5EC18645"},
+    {"role":"BootROM helper","path":"files/bootrom/windows-tools/custom_exec_no_verify_65015f08.bin","size":96,"sha256":"32D8B796FF484C168D7FC63D9ED75D056D0833B55C7D65FBDAF2C548474F3C62"},
+    {"role":"unlock cleanup payload","path":"files/bootrom/windows-tools/misc-wipe.bin","size":2048,"sha256":"BD6B67E852D6072E6FB87040F2AC40216D5B661B7FA661E7024569ECF8DDB3A7"},
+    {"role":"tested Unisoc driver INF","path":"files/bootrom/windows-driver/sprdvcom.inf","size":79774,"sha256":"7AA924930285803B50F4468F071657DA11C4764B4364D4CCA43757E766CD6987"},
+    {"role":"tested Unisoc driver catalog","path":"files/bootrom/windows-driver/sprdvcom.cat","size":65932,"sha256":"BD421E4EFFFD1629A3EFD8B7112F7ABA675AD36B8816EBCAC6C947A7CFEAB9FF"},
+    {"role":"tested Unisoc driver binary","path":"files/bootrom/windows-driver/amd64/sprdvcom.sys","size":45640,"sha256":"53E573CD4D5371EDE7846F0F6E5243367E24B18E1D374DD999C052302C65E182"},
+    {"role":"tested driver co-installer","path":"files/bootrom/windows-driver/amd64/WdfCoInstaller01009.dll","size":1730888,"sha256":"4CF39FAE9F8E3A2ED6F479AB24DD669B0FCDD28879E70785AFA3D5F13C12F3AE"},
+    {"role":"patched FDL1","path":"files/unlock/fdl1.bin","size":60664,"sha256":"98A308E4C755219D592288EB668117B938C3435783DD5E0F75E450CDCE5A3076"},
+    {"role":"patched FDL2","path":"files/unlock/fdl2.bin","size":1159000,"sha256":"5BCAE75A8E3A940B294F46DDE2CD8FC5817A89A0544C917437A500A9188F03B3"},
+    {"role":"unlock SPL","path":"files/unlock/spl-unlock.bin","size":65416,"sha256":"2DFE4FC1D5B82768B78247D51A98BE5874A10A54264AAA165D2D2D5639CEF2DB"},
+    {"role":"unlock U-Boot","path":"files/unlock/uboot-unlock.bin","size":1159000,"sha256":"F16385309B5F2538D406207411D09B3D02DE23B341E5A10602BF458DFED7E5B3"},
+    {"role":"stock SPL recovery","path":"files/recovery/stock-spl.bin","size":65416,"sha256":"895FC2EDD262857E48D9472D117AFB63668D17820A289F1E51E57696FE403F77"},
+    {"role":"stock U-Boot recovery","path":"files/recovery/stock-uboot.bin","size":1159000,"sha256":"776471A810A4A79B6A5B0084BCE6C1F9E0D40D3F32069D0486E370BB3FD65C56"},
+    {"role":"stock boot recovery","path":"files/recovery/stock-boot.img","size":67108864,"sha256":"9C7A2A089E0E97D683ACCD095FFF0DADC95B37C1AF2533E5854925FD4791E7C2"},
+    {"role":"final rooted boot","path":"files/root/boot.img","size":67108864,"sha256":"F9A3DE1A4C377EA2871A03E6437F75F38BF4A0532A36A2418CA1BAE78DE78D70"},
+    {"role":"final rooted boot compressed","path":"files/root/boot.img.xz","size":16069768,"sha256":"E9C90386F771B48C4017FDA24392200A1AE3E75DF5FE214BADB8C7E9A5E80DEC"},
+    {"role":"paired KernelSU manager","path":"files/root/manager.apk","size":21297954,"sha256":"57FB4AAEFF55D4B8A0428738399CCF3D27153FC7F3BC50565B7EDFB291B90AF2"},
+    {"role":"paired manager certificate","path":"files/root/manager-cert.der","size":744,"sha256":"AEFD00026B3486F740412BC4FB0605FF1BD84D23B41F1CA0760626E386D0DD3B"},
+    {"role":"persistent ARMv7 daemon","path":"files/root/ksud","size":3472028,"sha256":"504DBBE6439F82F5624A891DF31885FACB74FAA1AD89FCC302968842403A8AD5"},
+    {"role":"prewrite recovery backup","path":"evidence/kernelsu-manager-pair-v3-20260901/boot_a-prewrite-v2.img.xz","size":16068956,"sha256":"C22598384719E55A6B31AEB14A65D610302CC98850D28DBAA542B2FCBE5B0DC7"},
+    {"role":"final hardware readback","path":"evidence/kernelsu-manager-pair-v3-20260901/boot_a-v3-readback.img.xz","size":16069768,"sha256":"E9C90386F771B48C4017FDA24392200A1AE3E75DF5FE214BADB8C7E9A5E80DEC"}
+  ]
+}
