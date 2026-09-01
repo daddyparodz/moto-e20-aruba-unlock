@@ -13,7 +13,7 @@ sudo apt-get update
 sudo apt-get install git build-essential pkg-config libusb-1.0-0-dev python3 adb xz-utils
 ```
 
-Install PowerShell 7 (`pwsh`) from Microsoft's package repository if you intend to run the guarded bootloader-unlock transaction. CI does not need PowerShell because it never contacts a phone.
+Install PowerShell 7 (`pwsh`) from Microsoft's package repository if you intend to run the guarded bootloader-unlock transaction.
 
 ## 2. Build and verify
 
@@ -71,4 +71,4 @@ cd /tmp/aruba-unlock-tools
 
 At `FDL2 >`, follow the backup, exact-hash, `boot_a` write, full readback, and recovery gates in [the canonical root guide](ROOT_WITH_KERNELSU.md). Linux equivalents are `stat`, `sha256sum`, `cp`, and absolute `/.../boot.img` paths. Manager installation and persistence checks use the same cross-platform `adb` commands.
 
-Do not attach a phone to the GitHub Actions runner. The self-hosted workflow performs source compilation and offline verification only.
+The public repository intentionally has no GitHub Actions workflow. Run these offline verification commands locally before proposing or accepting changes.

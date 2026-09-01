@@ -21,7 +21,7 @@ Do not turn historical Git commits, branches, filenames, or failed experiments i
 
 ## Contribution rules
 
-- Keep the public workflow understandable from a fresh clone.
+- Keep the public procedure understandable from a fresh clone.
 - Update the replay manifest and verifier whenever a required file changes.
 - Validate Markdown links and run `git diff --check` before committing.
 - Keep hardware-facing commands guarded by exact target, slot, size, and hash checks.

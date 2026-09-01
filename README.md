@@ -1,7 +1,5 @@
 # Moto E20 ARUBA Unlock + KernelSU Root
 
-[![Replay package](https://github.com/daddyparodz/moto-e20-aruba-unlock/actions/workflows/verify-release.yml/badge.svg)](https://github.com/daddyparodz/moto-e20-aruba-unlock/actions/workflows/verify-release.yml)
-
 This repository contains the tested, reproducible path for unlocking the bootloader and obtaining persistent KernelSU root on the Motorola Moto E20 `aruba` (`XT2155-3`, Unisoc UMS9230, eMMC) running `RONS31.267-94-14`.
 
 ## Verified result
