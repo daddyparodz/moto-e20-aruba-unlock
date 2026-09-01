@@ -44,6 +44,7 @@ Require `verified_files=23` and `ARUBA_REPLAY_PACKAGE=PASS`.
 
 Supporting references:
 
+- [Contributing](CONTRIBUTING.md)
 - [Native Linux host setup](docs/LINUX_HOST.md)
 - [Replay package and integrity manifest](release/README.md)
 - [Artifacts, backups, and recovery](docs/ARTIFACTS-AND-RECOVERY.md)
